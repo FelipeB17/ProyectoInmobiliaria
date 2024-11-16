@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebInmobiliaria - Nosotros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Fotos/logo.png" alt="Logo WebInmobiliaria">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inmuebles</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span id="userInfo" class="hidden">Bienvenido, <span id="userName"></span></span>
+            <button id="loginBtn">Ingresar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="carousel-section">
+            <div class="carousel" id="imageCarousel">
+                <img src="Fotos/carrousel1.jpg" alt="Imagen 1" class="active">
+                <img src="Fotos/carrousel2.jpg" alt="Imagen 2">
+                <img src="Fotos/carrousel3.jpg" alt="Imagen 3">
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-box">
+                <h2>¿Quiénes Somos?</h2>
+                <p>WebInmobiliaria es una empresa líder en el sector inmobiliario, dedicada a ofrecer soluciones integrales para la compra, venta y alquiler de propiedades. Con años de experiencia en el mercado, nos hemos consolidado como un referente de confianza y profesionalismo.</p>
+            </div>
+            <div class="about-box">
+                <h2>Visión</h2>
+                <p>Ser la empresa inmobiliaria más innovadora y confiable, reconocida por nuestra excelencia en el servicio y por crear experiencias excepcionales para nuestros clientes en cada transacción inmobiliaria.</p>
+            </div>
+            <div class="about-box">
+                <h2>Misión</h2>
+                <p>Proporcionar soluciones inmobiliarias integrales y personalizadas, superando las expectativas de nuestros clientes a través de un servicio de calidad, ético y profesional, contribuyendo al desarrollo sostenible de las comunidades donde operamos.</p>
+            </div>
+            <div class="about-box">
+                <h2>Objetivos</h2>
+                <ul>
+                    <li>Ofrecer un servicio personalizado y de alta calidad a cada cliente.</li>
+                    <li>Expandir nuestra presencia en el mercado nacional e internacional.</li>
+                    <li>Implementar tecnologías innovadoras para mejorar la experiencia del cliente.</li>
+                    <li>Contribuir al desarrollo sostenible de las comunidades donde operamos.</li>
+                </ul>
+            </div>
+            <div class="about-box">
+                <h2>Valores</h2>
+                <ul>
+                    <li>Integridad</li>
+                    <li>Excelencia</li>
+                    <li>Innovación</li>
+                    <li>Compromiso</li>
+                    <li>Responsabilidad social</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Encuéntranos</h3>
+            <p>Calle Principal 123, Ciudad</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contáctanos</h3>
+            <p>Teléfono: 123-456-789</p>
+            <p>Móvil: 987-654-321</p>
+            <p>Email: info@webinmobiliaria.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/?lang=es" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.Instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Correo electrónico" required aria-label="Correo electrónico">
+                <input type="password" placeholder="Contraseña" required aria-label="Contraseña">
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/nosotros.js"></script>
+</body>
+</html>

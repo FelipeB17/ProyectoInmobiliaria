@@ -1,0 +1,56 @@
+.payment-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.payment-section h1 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.payment-message {
+    margin-bottom: 2rem;
+}
+
+.payment-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.payment-button:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.payment-guide {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.payment-guide h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.payment-guide ol {
+    padding-left: 1.5rem;
+}
+
+.payment-guide li {
+    margin-bottom: 0.5rem;
+}

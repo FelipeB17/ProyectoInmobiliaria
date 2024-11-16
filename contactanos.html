@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebInmobiliaria - Contáctanos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contactanos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="fotos/logo.png" alt="Logo WebInmobiliaria">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inmuebles</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactanos.html" class="active">Contáctanos</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span id="userInfo" class="hidden">Bienvenido, <span id="userName"></span></span>
+            <button id="loginBtn">Ingresar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Principal 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> Teléfono: 123-456-789</p>
+                <p><i class="fas fa-mobile-alt"></i> Móvil: 987-654-321</p>
+                <p><i class="fas fa-envelope"></i> Email: info@webinmobiliaria.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/?lang=es" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.Instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Envíanos un Mensaje</h2>
+                <form id="contactForm">
+                    <input type="text" placeholder="Nombre" required aria-label="Nombre">
+                    <input type="email" placeholder="Correo electrónico" required aria-label="Correo electrónico">
+                    <input type="tel" placeholder="Teléfono" aria-label="Teléfono">
+                    <textarea placeholder="Mensaje" required aria-label="Mensaje"></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+        <section class="map-section">
+            <h2>Nuestra Ubicación</h2>
+            <div id="map" aria-label="Mapa de ubicación de WebInmobiliaria"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Encuéntranos</h3>
+            <p>Calle Principal 123, Ciudad</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contáctanos</h3>
+            <p>Teléfono: 123-456-789</p>
+            <p>Móvil: 987-654-321</p>
+            <p>Email: info@webinmobiliaria.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/?lang=es" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.Instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/contactanos.js"></script>
+</body>
+</html>

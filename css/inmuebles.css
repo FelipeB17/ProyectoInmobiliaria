@@ -1,0 +1,98 @@
+.filter-section {
+    background-color: var(--background-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+#filterForm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+#filterForm input,
+#filterForm select {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#filterForm button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#filterForm button:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.property-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.property-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 1rem;
+}
+
+.property-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.property-info p {
+    margin-bottom: 0.5rem;
+}
+
+.property-info button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.property-info button:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
