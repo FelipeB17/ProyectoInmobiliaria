@@ -20,20 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    loginForm.onsubmit = function(e) {
-        e.preventDefault();
-        const email = loginForm.querySelector('input[type="email"]').value;
-        // Aquí normalmente harías una llamada a tu backend para autenticar al usuario
-        // Por ahora, simularemos un inicio de sesión exitoso
-        simulateLogin(email);
-    }
-
-    function simulateLogin(email) {
-        // Simula un inicio de sesión exitoso
-        const user = email.split('@')[0]; // Usa la parte antes del @ como nombre de usuario
-        userName.textContent = user;
-        userInfo.classList.remove('hidden');
-        loginBtn.classList.add('hidden');
-        loginModal.style.display = "none";
-    }
 });

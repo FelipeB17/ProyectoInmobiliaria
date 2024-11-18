@@ -69,6 +69,8 @@ body {
 }
 
 #loginBtn {
+    display: inline-block;
+    text-decoration: none;
     padding: 0.5rem 1rem;
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -150,33 +152,6 @@ body {
     cursor: pointer;
 }
 
-#loginForm {
-    display: flex;
-    flex-direction: column;
-}
-
-#loginForm input,
-#loginForm button {
-    margin-top: 10px;
-    padding: 0.5rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-}
-
-#loginForm button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-#loginForm button:hover {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-}
-
 .hidden {
     display: none;
 }
@@ -225,4 +200,32 @@ body {
         background-color: rgba(255,255,255,0.1);
         border-bottom: 2px solid var(--accent-color);
     }
-}
+
+    button {
+        padding: 0.5rem 1rem;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+    }
+    
+    button:hover {
+        background-color: var(--accent-color);
+        color: var(--secondary-color);
+    }
+    
+    #filterForm button {
+        margin: 0.5rem;
+        min-width: 100px;
+    }
+    
+    #filterForm button[type="reset"] {
+        background-color: var(--secondary-color);
+    }
+    
+    #filterForm button[type="reset"]:hover {
+        background-color: var(--accent-color);
+}}
