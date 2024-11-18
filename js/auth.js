@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton.disabled = true;
 
             try {
-                const response = await fetch(`http://localhost:8082/user/signup`, {
+                const response = await fetch(`http://localhost:8081/user/signup`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
