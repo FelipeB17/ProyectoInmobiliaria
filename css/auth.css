@@ -20,7 +20,7 @@ body {
     background-attachment: fixed; 
     min-height: 100vh; 
 }
-
+/*se supone que deberia cambiar*/
 .auth-container {
     flex: 1;
     display: flex;
