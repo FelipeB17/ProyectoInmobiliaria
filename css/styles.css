@@ -86,6 +86,24 @@ body {
     color: var(--secondary-color);
 }
 
+#logoutBtn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#logoutBtn:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
 .footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -152,8 +170,8 @@ body {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
+.hidden  {
+    display: none !important;
 }
 
 .featured-properties {

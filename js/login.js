@@ -6,23 +6,19 @@ document.addEventListener('DOMContentLoaded', function () {
     loginForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // Obtenemos los valores del formulario
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        // Preparamos el objeto de login
         const loginData = {
             email: email,
             password: password
         };
 
-        // Deshabilitar el botón mientras hacemos la solicitud
         loginButton.disabled = true;
         loginButton.innerText = 'Cargando...';
 
         try {
-            // Hacemos el POST a la API de login
-            const response = await fetch('http://localhost:8081/user/login', {
+            const response = await fetch('http://localhost:8081/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -30,14 +26,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 body: JSON.stringify(loginData)
             });
 
-            // Verificamos si la respuesta es exitosa
             if (response.ok) {
                 const result = await response.json();
 
-                // Si el login es exitoso, redirigimos o mostramos un mensaje
                 if (result) {
-                    // Aquí puedes redirigir a otra página, como el dashboard o la página principal
-                    window.location.href = 'index.html'; // o cualquier otra URL
+                    // Obtener el nombre del usuario
+                    const userResponse = await fetch(`http://localhost:8081/user/email/${loginData.email}`, {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${result.token}`,
+                        }
+                    });
+
+                        
+                    if (userResponse.ok) {
+                        const userData = await userResponse.text();
+                        // Guardar el nombre del usuario en localStorage
+                        localStorage.setItem('userName', userData);
+                    } else {
+                        throw new Error('Error al obtener información del usuario');
+                    }
+
+                    window.location.href = 'index.html';
                 } else {
                     throw new Error('Credenciales incorrectas');
                 }
@@ -46,12 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
         } catch (error) {
-            // Si ocurre un error, mostramos el mensaje
             errorMessage.textContent = error.message;
         } finally {
-            // Restauramos el botón de login
             loginButton.disabled = false;
             loginButton.innerText = 'Entrar';
         }
     });
-});
+})

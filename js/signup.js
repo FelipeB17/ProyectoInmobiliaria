@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             // Hacemos el POST a la API de signup
-            const response = await fetch('http://localhost:8081/user/signup', {
+            const response = await fetch('http://localhost:8081/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },  
                 body: JSON.stringify(userData)
             });
-
+            //http://localhost:8081/user/email asi obtengo el nombre del usuario 
             // Verificamos si la respuesta es exitosa
             if (response.ok) {
                 const result = await response.text(); // El backend devuelve un mensaje de texto
