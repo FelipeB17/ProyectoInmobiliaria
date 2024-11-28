@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Pagos - WebInmobiliaria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/inmuebles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Fotos/logo.png" alt="Logo WebInmobiliaria">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Inmuebles</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contactanos.html">Contáctanos</a></li>
+                    <li><a href="pagos.html">Pagos</a></li>
+                </ul>
+            </nav>
+            <div class="user-area">
+                <span id="userInfo" class="hidden">Bienvenido, <span id="userName"></span></span>
+                <a href="login.html" id="loginBtn">Ingresar</a>
+                <button id="logoutBtn" class="hidden">Cerrar sesión</button>
+            </div>
+        </header>
+    </header>
+
+    <main class="main-content">
+        <section id="portalPagos" class="portal-pagos">
+            <h2>Portal de Pagos</h2>
+            <div id="detallesTransaccion"></div>
+            
+            <form id="compraForm" class="pago-form compra-form">
+                <h3>Formulario de Compra</h3>
+                <div class="form-group">
+                    <label for="nombreCompletoCompra">Nombre Completo:</label>
+                    <input type="text" id="nombreCompletoCompra" name="nombreCompleto" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailCompra">Correo Electrónico:</label>
+                    <input type="email" id="emailCompra" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="tarjetaCompra">Número de Tarjeta:</label>
+                    <input type="text" id="tarjetaCompra" name="tarjeta" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaExpiracionCompra">Fecha de Expiración:</label>
+                    <input type="text" id="fechaExpiracionCompra" name="fechaExpiracion" placeholder="MM/AA" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvvCompra">CVV:</label>
+                    <input type="text" id="cvvCompra" name="cvv" required>
+                </div>
+                <button type="submit" class="submit-button">Realizar Compra</button>
+            </form>
+
+            <form id="arriendoForm" class="pago-form arriendo-form">
+                <h3>Formulario de Arriendo</h3>
+                <div class="form-group">
+                    <label for="nombreCompletoArriendo">Nombre Completo:</label>
+                    <input type="text" id="nombreCompletoArriendo" name="nombreCompleto" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailArriendo">Correo Electrónico:</label>
+                    <input type="email" id="emailArriendo" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefonoArriendo">Teléfono:</label>
+                    <input type="tel" id="telefonoArriendo" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaInicioArriendo">Fecha de Inicio de Arriendo:</label>
+                    <input type="date" id="fechaInicioArriendo" name="fechaInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="duracionArriendo">Duración del Arriendo (meses):</label>
+                    <input type="number" id="duracionArriendo" name="duracion" min="1" required>
+                </div>
+                <button type="submit" class="submit-button">Solicitar Arriendo</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Encuéntranos</h3>
+            <p>Calle Principal 123, Ciudad</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contáctanos</h3>
+            <p>Teléfono: 123-456-789</p>
+            <p>Móvil: 987-654-321</p>
+            <p>Email: info@webinmobiliaria.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/?lang=es" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.Instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/portal-pagos.js"></script>
+</body>
+</html>
