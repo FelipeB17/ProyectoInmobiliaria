@@ -32,7 +32,10 @@
     background-color: var(--accent-color);
     color: var(--secondary-color);
 }
-
+.whatsapp-link {
+    color: inherit; 
+    text-decoration: none; 
+  }
 .payment-guide {
     background-color: white;
     border-radius: 10px;
