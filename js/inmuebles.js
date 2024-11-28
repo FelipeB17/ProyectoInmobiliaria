@@ -67,6 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function viewProperty(id) {
     // Aquí iría la lógica para ver los detalles de una propiedad específica
-    console.log(`Ver detalles de la propiedad con ID: ${id}`);
+    window.location.href = `DetallesInmuebles.html?id=${id}`;
     // En una aplicación real, esto podría abrir una nueva página o un modal con más detalles
 }
