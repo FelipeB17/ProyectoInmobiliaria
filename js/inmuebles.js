@@ -23,36 +23,32 @@ document.addEventListener('DOMContentLoaded', function () {
         properties.forEach(property => {
             const propertyCard = document.createElement('div');
             propertyCard.className = 'property-card';
-            const imageUrl = property.images && property.images.length > 0 ? property.images[0].path : 'Fotos/placeholder-property.jpg';
+
             propertyCard.innerHTML = `
-                <img src="${imageUrl}" alt="${property.title}">
                 <h3>${property.title}</h3>
                 <p>${property.description}</p>
                 <p>Precio: $${property.price.toLocaleString()}</p>
                 <p>Habitaciones: ${property.bedrooms} | Baños: ${property.bathrooms}</p>
                 <p>Área: ${property.area} m²</p>
                 <p>Tipo: ${property.propertyType}</p>
-                <p>Dirección: ${property.address}</p>
-                <button onclick="verDetalles(${property.id})">Ver Detalles</button>
+                <p>Dirección: ${property.address.street}, ${property.address.city}, ${property.address.state}, ${property.address.zipCode}, ${property.address.country}</p>
+                <button id="buttoncard" onclick="verDetalles(${property.id})">Ver Detalles</button>
             `;
             propertyList.appendChild(propertyCard);
         });
     }
 
-    // Función para ver detalles de un inmueble específico
+    // Función para redirigir a la página de detalles con el ID del inmueble
     window.verDetalles = function (id) {
         console.log('Ver detalles del inmueble con ID:', id);
-        // Aquí podrías implementar la lógica para mostrar detalles del inmueble
-        // Por ejemplo, redirigir a una página de detalles o mostrar un modal
-    }
+        window.location.href = `DetallesInmuebles.html?id=${id}`;
+    };
 
     // Manejar el envío del formulario de filtro
     filterForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        // Aquí implementarías la lógica de filtrado
         console.log('Filtro aplicado');
-        // Por ahora, solo recargamos los inmuebles
-        loadProperties();
+        loadProperties(); // Aquí puedes agregar lógica para filtrar
     });
 
     // Cargar los inmuebles al iniciar la página

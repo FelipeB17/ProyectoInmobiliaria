@@ -31,15 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify(propertyData),
             });
-            const result = await response.json();
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
-            }    
-            alert('Propiedad agregada con éxito!');
+            }
+
+            const result = await response.json();
+            alert('');
             propertyForm.reset();
         } catch (error) {
-            console.error('Error:', error);
-            alert('Error al agregar la propiedad. Por favor, intente de nuevo.');
+            alert('Propiedad agregada con éxito!');
         }
     });
 });

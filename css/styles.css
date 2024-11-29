@@ -100,6 +100,27 @@ body {
     border-radius: 5px;
 }
 
+#buttoncard {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+#buttoncard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    text-decoration: none;
+    padding: 0.5rem 6rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
 #logoutBtn:hover {
     background-color: var(--accent-color);
     color: var(--secondary-color);
@@ -130,6 +151,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 
 .footer-section {

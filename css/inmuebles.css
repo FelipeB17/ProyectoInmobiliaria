@@ -45,10 +45,14 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    margin-bottom: 20rem;
+
 }
 
 .property-card {
     background-color: white;
+    padding: 20px;
+    margin: 10px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
