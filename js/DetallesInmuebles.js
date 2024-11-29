@@ -18,10 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
         direccion: 'Calle 53 #25-30'
     };
 
+    // <img src="https://via.placeholder.com/500x300.png?text=Inmueble+${inmueble.id}" alt="Inmueble ${inmueble.id}"></img>//
     detallesInmueble.innerHTML = `
         <h2>Detalles del Inmueble</h2>
         <div class="inmueble-card">
-            <img src="https://via.placeholder.com/500x300.png?text=Inmueble+${inmueble.id}" alt="Inmueble ${inmueble.id}">
+            
             <div class="inmueble-info">
                 <h3>ID: ${inmueble.id}</h3>
                 <p>${inmueble.tipo} en ${inmueble.gestion}</p>

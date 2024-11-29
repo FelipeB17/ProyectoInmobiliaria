@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         const {name,role} = userData ; 
                         console.log(`Nombre: ${name}, Rol: ${role}`);
                         localStorage.setItem("userName", name);
+                        localStorage.setItem("userRole",role);
                       
 
                     } else {

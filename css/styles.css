@@ -173,7 +173,10 @@ body {
 .social-icons a:hover {
     color: var(--accent-color);
 }
-
+.whatsapp-link {
+    color: inherit; 
+    text-decoration: none; 
+  }
 .modal {
     display: none;
     position: fixed;

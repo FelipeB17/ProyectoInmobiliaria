@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         userName.textContent = name;
         loginBtn.classList.add('hidden');
         logoutBtn.classList.remove('hidden');
-        adminBtn.classList.toggle('hidden', role == 0);  
+        adminBtn.classList.toggle('hidden', role !== 0); 
     }
 
     function updateUIForLoggedOutUser() {
