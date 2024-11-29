@@ -1,68 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inmuebles - WebInmobiliaria</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="Fotos/logo.png" alt="Logo WebInmobiliaria">
-            </a>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Inmuebles</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contactanos.html">Contáctanos</a></li>
-                <li><a href="pagos.html">Pagos</a></li>
-            </ul>
-        </nav>
-        <div class="user-area">
-            <span id="userInfo" class="hidden">Bienvenido, <span id="userName"></span></span>
-            <a href="login.html" id="loginBtn">Ingresar</a>
-            <button id="logoutBtn" class="hidden">Cerrar sesión</button>
-        </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="Fotos/logo.png" alt="Logo WebInmobiliaria" />
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Inmuebles</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+          <li><a href="pagos.html">Pagos</a></li>
+        </ul>
+      </nav>
+      <div class="user-area">
+        <span id="userInfo" class="hidden" aria-live="polite"
+          >Bienvenido, <span id="userName"></span
+        ></span>
+        <a href="login.html" id="loginBtn">Ingresar</a>
+        <button id="logoutBtn" class="hidden">Cerrar sesión</button>
+        <a href="admin.html" id="adminBtn" >Admin</a>
+      </div>
     </header>
 
     <main>
-        <section class="filter-section">
-            <h2>Filtrar Inmuebles</h2>
-            <form id="filterForm">
-                <input type="text" placeholder="Ciudad">
-                <input type="text" placeholder="Barrio">
-                <select>
-                    <option value="">Tipo de Inmueble</option>
-                    <option value="casa">Casa</option>
-                    <option value="apartamento">Apartamento</option>
-                    <option value="local">Local Comercial</option>
-                </select>
-                <select>
-                    <option value="">Tipo de Gestión</option>
-                    <option value="venta">Venta</option>
-                    <option value="arriendo">Arriendo</option>
-                </select>
-                <input type="text" placeholder="ID del Inmueble">
-                <input type="number" placeholder="Precio Mínimo">
-                <input type="number" placeholder="Precio Máximo">
-                <button type="submit">Buscar</button>
-                <button type="reset">Limpiar</button>
-            </form>
-        </section>
+      <section class="filter-section">
+        <h2>Filtrar Inmuebles</h2>
+        <form id="filterForm" aria-label="Formulario de filtro de inmuebles">
+          <input
+            type="text"
+            name="ciudad"
+            placeholder="Ciudad"
+            aria-label="Ciudad"
+          />
+          <input
+            type="text"
+            name="barrio"
+            placeholder="Barrio"
+            aria-label="Barrio"
+          />
+          <select name="tipoInmueble" aria-label="Tipo de Inmueble">
+            <option value="">Tipo de Inmueble</option>
+            <option value="casa">Casa</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="local">Local Comercial</option>
+          </select>
+          <select name="tipoGestion" aria-label="Tipo de Gestión">
+            <option value="">Tipo de Gestión</option>
+            <option value="venta">Venta</option>
+            <option value="arriendo">Arriendo</option>
+          </select>
+          <input
+            type="text"
+            name="idInmueble"
+            placeholder="ID del Inmueble"
+            aria-label="ID del Inmueble"
+          />
+          <input
+            type="number"
+            name="precioMinimo"
+            placeholder="Precio Mínimo"
+            aria-label="Precio Mínimo"
+          />
+          <input
+            type="number"
+            name="precioMaximo"
+            placeholder="Precio Máximo"
+            aria-label="Precio Máximo"
+          />
+          <button type="submit">Buscar</button>
+          <button type="reset">Limpiar</button>
+        </form>
+      </section>
 
-        <section class="property-list">
-            <!-- Aquí irían las tarjetas de los inmuebles -->
-        </section>
+      <section class="property-list" aria-live="polite">
+        <!-- Aquí se agregarán dinámicamente las tarjetas de los inmuebles -->
+      </section>
     </main>
 
     <footer class="footer">
-        <!-- El mismo footer que en index.html -->
+      <!-- El mismo footer que en index.html -->
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+    <script src="js/inmuebles.js"></script>
+  </body>
 </html>

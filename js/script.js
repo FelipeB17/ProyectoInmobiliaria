@@ -3,25 +3,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const userName = document.getElementById('userName');
     const loginBtn = document.getElementById('loginBtn');
     const logoutBtn = document.getElementById('logoutBtn');
+    const adminBtn = document.getElementById('adminBtn');
 
-    function updateUIForLoggedInUser(name) {
+    // Helper functions to update UI
+    function updateUIForLoggedInUser(name, role) {
         userInfo.classList.remove('hidden');
         userName.textContent = name;
         loginBtn.classList.add('hidden');
         logoutBtn.classList.remove('hidden');
+        adminBtn.classList.toggle('hidden', role !== 0);
     }
 
     function updateUIForLoggedOutUser() {
         userInfo.classList.add('hidden');
         loginBtn.classList.remove('hidden');
         logoutBtn.classList.add('hidden');
+        adminBtn.classList.add('hidden');
     }
 
-    // Check if there's a stored user name
+    // Check if user is logged in
     const storedUserName = localStorage.getItem('userName');
-    const storedUserEmail = localStorage.getItem('userEmail');
+    const storedUserRole = localStorage.getItem('userRole');
     if (storedUserName) {
-        updateUIForLoggedInUser(storedUserName);
+        updateUIForLoggedInUser(storedUserName, parseInt(storedUserRole));
     } else {
         updateUIForLoggedOutUser();
     }
@@ -30,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     logoutBtn.addEventListener('click', function() {
         localStorage.removeItem('userName');
         localStorage.removeItem('userEmail');
+        localStorage.removeItem('userRole');
         updateUIForLoggedOutUser();
     });
 });
+
