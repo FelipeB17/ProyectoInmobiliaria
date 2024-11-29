@@ -1,3 +1,41 @@
+function displayProperties(property, actionText) {
+    const content = document.querySelector("#detallesTransaccion")
+
+    if (!content) return
+
+    content.innerHTML = `
+        <h3>Detalles de la Transacción</h3>
+        <p>Inmueble ID: ${property.id}</p>
+        <p>Tipo: ${property.propertyType}</p>
+        <p>Acción: ${actionText}</p>
+        <p>Monto a pagar: $${property.price.toLocaleString()}</p>
+    `;
+}
+
+function renderInmueble(actionText) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const propertyId = urlParams.get('id');
+    
+
+    async function loadProperties() {
+        try {
+            const response = await fetch(`http://localhost:8081/property/${propertyId}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const properties = await response.json();
+            console.log(properties)
+            displayProperties(properties, actionText);
+        } catch (error) {
+            console.error('Error:', error);
+            propertyList.innerHTML = '<p>Error al cargar los inmuebles. Por favor, intente de nuevo más tarde.</p>';
+        }
+    }
+
+    loadProperties()
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const propertyId = urlParams.get('id');
@@ -25,6 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <p>Monto a pagar: $${precio.toLocaleString()}</p>
     `;
 
+    renderInmueble(actionText)
+    
+
     if (action === 'rent') {
         compraForm.style.display = 'none';
         arriendoForm.style.display = 'block';
@@ -32,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         compraForm.style.display = 'block';
         arriendoForm.style.display = 'none';
     }
+
+
 
     compraForm.addEventListener('submit', function(e) {
         e.preventDefault();
