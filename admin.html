@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - WebInmobiliaria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Fotos/logo.png" alt="Logo WebInmobiliaria">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inmuebles</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span id="userInfo">Bienvenido, <span id="userName"></span></span>
+            <button id="logoutBtn">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Panel de Administración</h1>
+        <form id="propertyForm">
+            <h2>Agregar Nueva Propiedad</h2>
+            
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+            
+            <label for="bedrooms">Habitaciones:</label>
+            <input type="number" id="bedrooms" name="bedrooms" required>
+            
+            <label for="bathrooms">Baños:</label>
+            <input type="number" id="bathrooms" name="bathrooms" required>
+            
+            <label for="area">Área (m²):</label>
+            <input type="number" id="area" name="area" step="0.01" required>
+            
+            <label for="propertyType">Tipo de Propiedad:</label>
+            <select id="propertyType" name="propertyType" required>
+                <option value="">Seleccione un tipo</option>
+                <option value="HOUSE">Casa</option>
+                <option value="APARTMENT">Apartamento</option>
+                <option value="OFFICE">Oficina</option>
+                <option value="LAND">Terreno</option>
+            </select>
+            
+            <label for="propertyEstate">Estado de la Propiedad:</label>
+            <select id="propertyEstate" name="propertyEstate" required>
+                <option value="">Seleccione un estado</option>
+                <option value="AVAILABLE">Disponible</option>
+                <option value="UNAVAILABLE">No disponible</option>
+                
+            </select>
+            
+            <h3>Dirección</h3>
+            <label for="street">Calle:</label>
+            <input type="text" id="street" name="street" required>
+            
+            <label for="city">Ciudad:</label>
+            <input type="text" id="city" name="city" required>
+            
+            <label for="state">Estado/Provincia:</label>
+            <input type="text" id="state" name="state" required>
+            
+            <label for="zipCode">Código Postal:</label>
+            <input type="text" id="zipCode" name="zipCode" required>
+            
+            <label for="country">País:</label>
+            <input type="text" id="country" name="country" required>
+            
+            <button type="submit">Agregar Propiedad</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Encuéntranos</h3>
+            <p>UFPS edificio SA 501</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contáctanos</h3>
+            <p>Teléfono: 5769526</p>
+            <p>
+                Móvil: 
+                <a href="https://wa.me/573138776936" class="whatsapp-link" target="_blank">+57 313 8776936</a>
+            </p>
+            <p>Email: rentabien123@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/?lang=es" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.Instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

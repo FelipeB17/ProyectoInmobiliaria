@@ -1,0 +1,90 @@
+#propertyForm {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#propertyForm h2, #propertyForm h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+#propertyForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+#propertyForm input[type="text"],
+#propertyForm input[type="number"],
+#propertyForm textarea,
+#propertyForm select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#propertyForm button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#propertyForm button:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+main h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin: 2rem 0;
+}
+
+#adminBtn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+#adminBtn:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    #propertyForm {
+        padding: 1rem;
+    }
+
+    #propertyForm input[type="text"],
+    #propertyForm input[type="number"],
+    #propertyForm textarea,
+    #propertyForm select {
+        font-size: 0.9rem;
+    }
+
+    #adminBtn {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}

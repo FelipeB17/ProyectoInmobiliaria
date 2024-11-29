@@ -40,9 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         
                     if (userResponse.ok) {
-                        const userData = await userResponse.text();
-                        // Guardar el nombre del usuario en localStorage
-                        localStorage.setItem('userName', userData);
+                        const userData = await userResponse.json();
+                        const {name,role} = userData ; 
+                        console.log(`Nombre: ${name}, Rol: ${role}`);
+                        localStorage.setItem("userName", name);
+                      
+
                     } else {
                         throw new Error('Error al obtener información del usuario');
                     }

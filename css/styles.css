@@ -62,6 +62,7 @@ body {
 .user-area {
     display: flex;
     align-items: center;
+    gap : 1rem;
 }
 
 #userInfo {
@@ -89,7 +90,7 @@ body {
 #logoutBtn {
     display: inline-block;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
     background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
@@ -224,6 +225,7 @@ body {
 
     .user-area {
         margin-top: 1rem;
+    
     }
 
     .footer {
